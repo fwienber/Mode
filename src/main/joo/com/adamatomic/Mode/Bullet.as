@@ -2,25 +2,38 @@ package com.adamatomic.Mode
 {
 	import org.flixel.*;
 
-	public class BotBullet extends FlxSprite
+	public class Bullet extends FlxSprite
 	{
-		[Embed(source="../../../data/bot_bullet.png")] private var ImgBullet:Class;
-		[Embed(source="../../../data/jump.mp3")] private var SndHit:Class;
-		[Embed(source="../../../data/enemy.mp3")] private var SndShoot:Class;
+		[Embed(source="../../../src/main/joo/data/bullet.png")] private var ImgBullet:Class;
+		[Embed(source="../../../src/main/joo/data/jump.mp3")] private var SndHit:Class;
+		[Embed(source="../../../src/main/joo/data/shoot.mp3")] private var SndShoot:Class;
 		
-		public function BotBullet()
+		public function Bullet()
 		{
 			super();
 			loadGraphic(ImgBullet,true);
-			addAnimation("idle",[0, 1], 50);
-			addAnimation("poof",[2, 3, 4], 50, false);
+			width = 6;
+			height = 6;
+			offset.x = 1;
+			offset.y = 1;
 			exists = false;
+			
+			addAnimation("up",[0]);
+			addAnimation("down",[1]);
+			addAnimation("left",[2]);
+			addAnimation("right",[3]);
+			addAnimation("poof",[4, 5, 6, 7], 50, false);
 		}
 		
 		override public function update():void
 		{
 			if(dead && finished) exists = false;
 			else super.update();
+		}
+		
+		override public function render():void
+		{
+			super.render();
 		}
 
 		override public function hitSide(Contact:FlxObject,Velocity:Number):void { kill(); }
@@ -39,12 +52,19 @@ package com.adamatomic.Mode
 		
 		public function shoot(X:int, Y:int, VelocityX:int, VelocityY:int):void
 		{
-			FlxG.play(SndShoot,0.5);
+			FlxG.play(SndShoot);
 			super.reset(X,Y);
 			solid = true;
 			velocity.x = VelocityX;
 			velocity.y = VelocityY;
-			play("idle");
+			if(velocity.y < 0)
+				play("up");
+			else if(velocity.y > 0)
+				play("down");
+			else if(velocity.x < 0)
+				play("left");
+			else if(velocity.x > 0)
+				play("right");
 		}
 	}
 }

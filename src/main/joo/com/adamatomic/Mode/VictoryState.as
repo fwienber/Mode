@@ -4,8 +4,8 @@ package com.adamatomic.Mode
 
 	public class VictoryState extends FlxState
 	{
-		[Embed(source="../../../data/spawner_gibs.png")] private var ImgGibs:Class;
-		[Embed(source="../../../data/menu_hit_2.mp3")] private var SndMenu:Class;
+		[Embed(source="../../../src/main/joo/data/spawner_gibs.png")] private var ImgGibs:Class;
+		[Embed(source="../../../src/main/joo/data/menu_hit_2.mp3")] private var SndMenu:Class;
 		
 		private var _timer:Number;
 		private var _fading:Boolean;
