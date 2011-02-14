@@ -326,12 +326,12 @@ package com.adamatomic.Mode
 			var sy:uint;
 			if(Spawners)
 			{
-				sx = 2+FlxU.random()*(rw-7);
-				sy = 2+FlxU.random()*(rw-7);
+				sx = uint(2+FlxU.random()*(rw-7));
+				sy = uint(2+FlxU.random()*(rw-7));
 			}
 			
 			//then place a bunch of blocks
-			var numBlocks:uint = 3+FlxU.random()*4;
+			var numBlocks:uint = uint(3+FlxU.random()*4);
 			if(!Spawners) numBlocks++;
 			var maxW:uint = 10;
 			var minW:uint = 2;
