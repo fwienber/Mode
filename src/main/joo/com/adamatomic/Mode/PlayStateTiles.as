@@ -4,10 +4,10 @@ package com.adamatomic.Mode
 
 	public class PlayStateTiles extends FlxState
 	{
-		[Embed(source="../../../src/main/joo/data/mode.mp3")] private var SndMode:Class;
-		[Embed(source="../../../src/main/joo/data/map.txt",mimeType="application/octet-stream")] private var TxtMap:Class;
-		[Embed(source="../../../src/main/joo/data/map2.txt",mimeType="application/octet-stream")] private var TxtMap2:Class;
-		[Embed(source="../../../src/main/joo/data/tiles_all.png")] private var ImgTiles:Class;
+		[Embed(source="../../../data/mode.mp3")] private var SndMode:Class;
+		[Embed(source="../../../data/map.txt",mimeType="application/octet-stream")] private var TxtMap:Class;
+		[Embed(source="../../../data/map2.txt",mimeType="application/octet-stream")] private var TxtMap2:Class;
+		[Embed(source="../../../data/tiles_all.png")] private var ImgTiles:Class;
 		
 		//major game objects
 		private var _tilemap:FlxTilemap;

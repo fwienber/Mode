@@ -4,10 +4,10 @@ package com.adamatomic.Mode
 
 	public class MenuState extends FlxState
 	{
-		[Embed(source="../../../src/main/joo/data/spawner_gibs.png")] private var ImgGibs:Class;
-		[Embed(source="../../../src/main/joo/data/cursor.png")] private var ImgCursor:Class;
-		[Embed(source="../../../src/main/joo/data/menu_hit.mp3")] private var SndHit:Class;
-		[Embed(source="../../../src/main/joo/data/menu_hit_2.mp3")] private var SndHit2:Class;
+		[Embed(source="../../../data/spawner_gibs.png")] private var ImgGibs:Class;
+		[Embed(source="../../../data/cursor.png")] private var ImgCursor:Class;
+		[Embed(source="../../../data/menu_hit.mp3")] private var SndHit:Class;
+		[Embed(source="../../../data/menu_hit_2.mp3")] private var SndHit2:Class;
 		
 		private var _gibs:FlxEmitter;
 		private var _b:FlxButton;

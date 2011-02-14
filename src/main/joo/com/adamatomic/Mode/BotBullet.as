@@ -4,9 +4,9 @@ package com.adamatomic.Mode
 
 	public class BotBullet extends FlxSprite
 	{
-		[Embed(source="../../../src/main/joo/data/bot_bullet.png")] private var ImgBullet:Class;
-		[Embed(source="../../../src/main/joo/data/jump.mp3")] private var SndHit:Class;
-		[Embed(source="../../../src/main/joo/data/enemy.mp3")] private var SndShoot:Class;
+		[Embed(source="../../../data/bot_bullet.png")] private var ImgBullet:Class;
+		[Embed(source="../../../data/jump.mp3")] private var SndHit:Class;
+		[Embed(source="../../../data/enemy.mp3")] private var SndShoot:Class;
 		
 		public function BotBullet()
 		{
@@ -40,7 +40,7 @@ package com.adamatomic.Mode
 		public function shoot(X:int, Y:int, VelocityX:int, VelocityY:int):void
 		{
 			FlxG.play(SndShoot,0.5);
-			super.reset(X,Y);
+			this.reset(X,Y);
 			solid = true;
 			velocity.x = VelocityX;
 			velocity.y = VelocityY;

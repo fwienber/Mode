@@ -4,10 +4,10 @@ package com.adamatomic.Mode
 
 	public class Spawner extends FlxSprite
 	{
-		[Embed(source="../../../src/main/joo/data/spawner.png")] private var ImgSpawner:Class;
-		[Embed(source="../../../src/main/joo/data/asplode.mp3")] private var SndExplode:Class;
-		[Embed(source="../../../src/main/joo/data/menu_hit_2.mp3")] private var SndExplode2:Class;
-		[Embed(source="../../../src/main/joo/data/hit.mp3")] private var SndHit:Class;
+		[Embed(source="../../../data/spawner.png")] private var ImgSpawner:Class;
+		[Embed(source="../../../data/asplode.mp3")] private var SndExplode:Class;
+		[Embed(source="../../../data/menu_hit_2.mp3")] private var SndExplode2:Class;
+		[Embed(source="../../../data/hit.mp3")] private var SndHit:Class;
 		
 		private var _timer:Number;
 		private var _bots:FlxGroup;

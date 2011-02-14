@@ -4,13 +4,13 @@ package com.adamatomic.Mode
 
 	public class Player extends FlxSprite
 	{
-		[Embed(source="../../../src/main/joo/data/spaceman.png")] private var ImgSpaceman:Class;
-		[Embed(source="../../../src/main/joo/data/jump.mp3")] private var SndJump:Class;
-		[Embed(source="../../../src/main/joo/data/land.mp3")] private var SndLand:Class;
-		[Embed(source="../../../src/main/joo/data/asplode.mp3")] private var SndExplode:Class;
-		[Embed(source="../../../src/main/joo/data/menu_hit_2.mp3")] private var SndExplode2:Class;
-		[Embed(source="../../../src/main/joo/data/hurt.mp3")] private var SndHurt:Class;
-		[Embed(source="../../../src/main/joo/data/jam.mp3")] private var SndJam:Class;
+		[Embed(source="../../../data/spaceman.png")] private var ImgSpaceman:Class;
+		[Embed(source="../../../data/jump.mp3")] private var SndJump:Class;
+		[Embed(source="../../../data/land.mp3")] private var SndLand:Class;
+		[Embed(source="../../../data/asplode.mp3")] private var SndExplode:Class;
+		[Embed(source="../../../data/menu_hit_2.mp3")] private var SndExplode2:Class;
+		[Embed(source="../../../data/hurt.mp3")] private var SndHurt:Class;
+		[Embed(source="../../../data/jam.mp3")] private var SndJam:Class;
 		
 		private var _jumpPower:int;
 		private var _bullets:Array;

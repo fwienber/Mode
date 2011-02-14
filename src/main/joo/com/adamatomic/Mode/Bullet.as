@@ -4,9 +4,9 @@ package com.adamatomic.Mode
 
 	public class Bullet extends FlxSprite
 	{
-		[Embed(source="../../../src/main/joo/data/bullet.png")] private var ImgBullet:Class;
-		[Embed(source="../../../src/main/joo/data/jump.mp3")] private var SndHit:Class;
-		[Embed(source="../../../src/main/joo/data/shoot.mp3")] private var SndShoot:Class;
+		[Embed(source="../../../data/bullet.png")] private var ImgBullet:Class;
+		[Embed(source="../../../data/jump.mp3")] private var SndHit:Class;
+		[Embed(source="../../../data/shoot.mp3")] private var SndShoot:Class;
 		
 		public function Bullet()
 		{
@@ -53,7 +53,7 @@ package com.adamatomic.Mode
 		public function shoot(X:int, Y:int, VelocityX:int, VelocityY:int):void
 		{
 			FlxG.play(SndShoot);
-			super.reset(X,Y);
+			this.reset(X,Y);
 			solid = true;
 			velocity.x = VelocityX;
 			velocity.y = VelocityY;

@@ -4,14 +4,14 @@ package com.adamatomic.Mode
 
 	public class PlayState extends FlxState
 	{
-		[Embed(source="../../../src/main/joo/data/tech_tiles.png")] protected var ImgTech:Class;
-		[Embed(source="../../../src/main/joo/data/dirt_top.png")] protected var ImgDirtTop:Class;
-		[Embed(source="../../../src/main/joo/data/dirt.png")] protected var ImgDirt:Class;
-		[Embed(source="../../../src/main/joo/data/notch.png")] protected var ImgNotch:Class;
-		[Embed(source="../../../src/main/joo/data/mode.mp3")] protected var SndMode:Class;
-		[Embed(source="../../../src/main/joo/data/countdown.mp3")] protected var SndCount:Class;
-		[Embed(source="../../../src/main/joo/data/gibs.png")] private var ImgGibs:Class;
-		[Embed(source="../../../src/main/joo/data/spawner_gibs.png")] private var ImgSpawnerGibs:Class;
+		[Embed(source="../../../data/tech_tiles.png")] protected var ImgTech:Class;
+		[Embed(source="../../../data/dirt_top.png")] protected var ImgDirtTop:Class;
+		[Embed(source="../../../data/dirt.png")] protected var ImgDirt:Class;
+		[Embed(source="../../../data/notch.png")] protected var ImgNotch:Class;
+		[Embed(source="../../../data/mode.mp3")] protected var SndMode:Class;
+		[Embed(source="../../../data/countdown.mp3")] protected var SndCount:Class;
+		[Embed(source="../../../data/gibs.png")] private var ImgGibs:Class;
+		[Embed(source="../../../data/spawner_gibs.png")] private var ImgSpawnerGibs:Class;
 		
 		//major game objects
 		protected var _blocks:FlxGroup;
@@ -348,10 +348,10 @@ package com.adamatomic.Mode
 				do
 				{
 					//keep generating different specs if they overlap the spawner
-					bw = minW + FlxU.random()*(maxW-minW);
-					bh = minH + FlxU.random()*(maxH-minH);
-					bx = -1 + FlxU.random()*(rw+1-bw);
-					by = -1 + FlxU.random()*(rw+1-bh);
+					bw = uint(minW + FlxU.random()*(maxW-minW));
+					bh = uint(minH + FlxU.random()*(maxH-minH));
+					bx = uint(-1 + FlxU.random()*(rw+1-bw));
+					by = uint(-1 + FlxU.random()*(rw+1-bh));
 					if(Spawners)
 						check = ((sx>bx+bw) || (sx+3<bx) || (sy>by+bh) || (sy+3<by));
 					else
